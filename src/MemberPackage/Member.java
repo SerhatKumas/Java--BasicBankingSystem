@@ -38,16 +38,17 @@ public class Member extends Person {
 		return jobTitle;
 	}
 
-	public void setJobTitle(String jobTitle) {
-		this.jobTitle = jobTitle;
-	}
-
+	
 	public String getMemberNumber() {
 		return memberNumber;
 	}
 
 	public List<BankAccount> getBankAccountList() {
 		return bankAccountList;
+	}
+
+	public void setBankAccountList(List<BankAccount> bankAccountList) {
+		this.bankAccountList = bankAccountList;
 	}
 
 }

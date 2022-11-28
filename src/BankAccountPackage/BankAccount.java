@@ -70,5 +70,9 @@ public class BankAccount {
 	public LocalDateTime getAccountClosingDate() {
 		return accountClosingDate;
 	}
+
+	public void setAccountClosingDate(LocalDateTime accountClosingDate) {
+		this.accountClosingDate = accountClosingDate;
+	}
 	
 }
