@@ -19,10 +19,10 @@ public class Member extends Person {
 	}
 
 	//Full-parameter constructor 
-	public Member(String idNumber, String name, String surname, String email, String phoneNumber, String jobTitle, String memberString, List<BankAccount> bankAccountList) {
+	public Member(String idNumber, String name, String surname, String email, String phoneNumber, String jobTitle, String memberNumber, List<BankAccount> bankAccountList) {
 		super(idNumber, name, surname, email, phoneNumber);
 		this.jobTitle = jobTitle;
-		this.memberNumber = memberString;
+		this.memberNumber = memberNumber;
 		this.bankAccountList = bankAccountList;
 	}
 	
@@ -38,7 +38,6 @@ public class Member extends Person {
 		return jobTitle;
 	}
 
-	
 	public String getMemberNumber() {
 		return memberNumber;
 	}
