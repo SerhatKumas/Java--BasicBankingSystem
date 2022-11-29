@@ -3,6 +3,7 @@ package MemberPackage;
 import java.util.List;
 
 import BankAccountPackage.BankAccount;
+import ControllerPackage.BankAccountController;
 import ControllerPackage.TransactionController;
 
 public class Member extends Person {
@@ -11,6 +12,7 @@ public class Member extends Person {
 	private String memberNumber;
 	private List<BankAccount> bankAccountList;
 	private TransactionController transactionController;
+	private BankAccountController bankAccountController;
 	
 	//Empty constructor 
 	public Member() {
@@ -19,15 +21,17 @@ public class Member extends Person {
 		this.memberNumber = "";
 		this.bankAccountList = null;
 		this.transactionController = null;
+		this.bankAccountController = null;
 	}
 
 	//Full-parameter constructor 
-	public Member(String idNumber, String name, String surname, String email, String phoneNumber, String jobTitle, String memberNumber, List<BankAccount> bankAccountList, TransactionController transactionController) {
+	public Member(String idNumber, String name, String surname, String email, String phoneNumber, String jobTitle, String memberNumber, List<BankAccount> bankAccountList, TransactionController transactionController, BankAccountController bankAccountController) {
 		super(idNumber, name, surname, email, phoneNumber);
 		this.jobTitle = jobTitle;
 		this.memberNumber = memberNumber;
 		this.bankAccountList = bankAccountList;
 		this.transactionController = transactionController;
+		this.bankAccountController = bankAccountController;
 	}
 	
 	//Copy constructor 
@@ -37,6 +41,7 @@ public class Member extends Person {
 		this.memberNumber = member.memberNumber;
 		this.bankAccountList = member.bankAccountList;
 		this.transactionController = member.transactionController;
+		this.bankAccountController = member.bankAccountController;
 	}
 
 	public String getJobTitle() {
@@ -55,4 +60,12 @@ public class Member extends Person {
 		this.bankAccountList = bankAccountList;
 	}
 
+	public TransactionController getTransactionController() {
+		return transactionController;
+	}
+
+	public BankAccountController getBankAccountController() {
+		return bankAccountController;
+	}
+	
 }

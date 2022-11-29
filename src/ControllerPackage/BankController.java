@@ -51,8 +51,8 @@ public class BankController {
 	}
 	
 	public Bank createBank(String bankName, String bankPhoneNumber, String bankEmail, String centerCityOfManagement,
-			BankingSystem bankingSystem, List<Member> memberList, TransactionController transactionController) {
-		return new Bank(bankName, bankPhoneNumber, bankEmail, centerCityOfManagement, bankingSystem, memberList,transactionController);
+			BankingSystem bankingSystem, List<Member> memberList, TransactionController transactionController, MemberController memberController, BankAccountController bankAccountController) {
+		return new Bank(bankName, bankPhoneNumber, bankEmail, centerCityOfManagement, bankingSystem, memberList, transactionController,memberController, bankAccountController);
 	}
 	
 	private void printBank(Bank bank) {

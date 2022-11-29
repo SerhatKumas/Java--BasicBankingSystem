@@ -3,6 +3,7 @@ package BankSystemPackage;
 import java.util.List;
 
 import BankPackage.Bank;
+import ControllerPackage.BankController;
 
 public class BankingSystem {
 	
@@ -11,6 +12,7 @@ public class BankingSystem {
 	private String countryName;
 	private String countryCode;
 	private List<Bank> bankList;
+	private BankController bankController;
 	
 	public BankingSystem() {
 		bankingSystemName = "" ;
@@ -18,14 +20,16 @@ public class BankingSystem {
 		this.countryName = "";
 		this.countryCode = "";
 		this.bankList = null;
+		this.bankController = null;
 	}
 	
-	public BankingSystem(String bankingSystemName, String centralBankName, String countryName, String countryCode, List<Bank> bankList) {
+	public BankingSystem(String bankingSystemName, String centralBankName, String countryName, String countryCode, List<Bank> bankList, BankController bankController) {
 		this.bankingSystemName = bankingSystemName;
 		this.centralBankName = centralBankName;
 		this.countryName = countryName;
 		this.countryCode = countryCode;
 		this.bankList = bankList;
+		this.bankController = bankController;
 	}
 	
 	
@@ -35,6 +39,7 @@ public class BankingSystem {
 		this.countryName = bankingSystem.countryName;
 		this.countryCode = bankingSystem.countryCode;
 		this.bankList = bankingSystem.bankList;
+		this.bankController = bankingSystem.bankController;
 	}
 
 	public List<Bank> getBankList() {
@@ -59,6 +64,10 @@ public class BankingSystem {
 
 	public String getCountryCode() {
 		return countryCode;
+	}
+
+	public BankController getBankController() {
+		return bankController;
 	}
 	
 }

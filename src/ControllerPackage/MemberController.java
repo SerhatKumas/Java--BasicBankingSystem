@@ -62,8 +62,8 @@ public class MemberController {
 		if(isRemoved) bank.setMemberList(memberList);
 	}
 	
-	public Member createMember(String idNumber, String name, String surname, String email, String phoneNumber, String jobTitle, String memberNumber, List<BankAccount> bankAccountList, TransactionController transactionController) {
-		return new Member(idNumber, name, surname, email, phoneNumber, jobTitle, memberNumber, bankAccountList, transactionController);
+	public Member createMember(String idNumber, String name, String surname, String email, String phoneNumber, String jobTitle, String memberNumber, List<BankAccount> bankAccountList, TransactionController transactionController, BankAccountController bankAccountController) {
+		return new Member(idNumber, name, surname, email, phoneNumber, jobTitle, memberNumber, bankAccountList, transactionController, bankAccountController);
 	}
 	
 	private void printMember(Member member) {
