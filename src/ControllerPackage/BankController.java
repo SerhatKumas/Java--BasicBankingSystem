@@ -6,6 +6,17 @@ import BankPackage.Bank;
 import BankSystemPackage.BankingSystem;
 
 public class BankController {
+	
+	public Bank getBankByName(BankingSystem bankingSystem, String name) {
+		List<Bank> bankList = bankingSystem.getBankList();
+		Bank returningBank = null;
+		for(Bank bank : bankList) if(bank.getBankName().equals(name)) printBank(returningBank);
+		return returningBank;
+	}
+	
+	public void displayBank(Bank bank) {
+		printBank(bank);
+	}
 
 	public void displayAllBanks(BankingSystem bankingSystem) {
 		List<Bank> bankList = bankingSystem.getBankList();
@@ -22,6 +33,12 @@ public class BankController {
 		List<Bank> bankList = bankingSystem.getBankList();
 		bankList.add(bank);
 		bankingSystem.setBankList(bankList);
+	}
+	
+	public void deleteBank(BankingSystem bankingSystem, Bank bank) {
+		List<Bank> bankList = bankingSystem.getBankList();
+		boolean isRemoved = bankList.remove(bank);
+		if(isRemoved) bankingSystem.setBankList(bankList);
 	}
 	
 	public void deleteBankByName(BankingSystem bankingSystem, String name) {

@@ -6,6 +6,17 @@ import BankAccountPackage.*;
 import MemberPackage.Member;
 
 public class BankAccountController {
+	
+	public BankAccount getBankAccountByAccountNumber(Member member, String accountNumber) {
+		List <BankAccount> bankAccountList = member.getBankAccountList();
+		BankAccount returningBankAccount = null;
+		for(BankAccount bankAccount : bankAccountList) if(bankAccount.getAccountNumber().equals(accountNumber)) returningBankAccount = bankAccount;
+		return returningBankAccount;
+	}
+	
+	public void displayBankAccount(BankAccount bankAccount) {
+		printBankAccount(bankAccount);
+	}
 
 	public void displayAllTheBankAccounts(Member member) {
 		List <BankAccount> bankAccountList = member.getBankAccountList();
@@ -31,7 +42,13 @@ public class BankAccountController {
 		List <BankAccount> bankAccountList = member.getBankAccountList();
 		bankAccountList.add(bankAccount);
 		member.setBankAccountList(bankAccountList);
-	}	
+	}
+	
+	public void deleteBankAccount(Member member, BankAccount bankAccount) {
+		List <BankAccount> bankAccountList = member.getBankAccountList();
+		boolean isRemoved = bankAccountList.remove(bankAccount);
+		if(isRemoved) member.setBankAccountList(bankAccountList);
+	}
 	
 	public void deleteBankAccountByAccountNumber(Member member, String accountNumber) {
 		List <BankAccount> bankAccountList = member.getBankAccountList();
