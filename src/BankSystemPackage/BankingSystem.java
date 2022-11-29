@@ -6,19 +6,22 @@ import BankPackage.Bank;
 
 public class BankingSystem {
 	
+	private String bankingSystemName;
 	private String centralBankName;
 	private String countryName;
 	private String countryCode;
 	private List<Bank> bankList;
 	
 	public BankingSystem() {
+		bankingSystemName = "" ;
 		this.centralBankName = "";
 		this.countryName = "";
 		this.countryCode = "";
 		this.bankList = null;
 	}
 	
-	public BankingSystem(String centralBankName, String countryName, String countryCode, List<Bank> bankList) {
+	public BankingSystem(String bankingSystemName, String centralBankName, String countryName, String countryCode, List<Bank> bankList) {
+		this.bankingSystemName = bankingSystemName;
 		this.centralBankName = centralBankName;
 		this.countryName = countryName;
 		this.countryCode = countryCode;
@@ -27,6 +30,7 @@ public class BankingSystem {
 	
 	
 	public BankingSystem(BankingSystem bankingSystem) {
+		this.bankingSystemName = bankingSystem.bankingSystemName;
 		this.centralBankName = bankingSystem.centralBankName;
 		this.countryName = bankingSystem.countryName;
 		this.countryCode = bankingSystem.countryCode;
@@ -39,6 +43,10 @@ public class BankingSystem {
 
 	public void setBankList(List<Bank> bankList) {
 		this.bankList = bankList;
+	}
+	
+	public String getBankingSystemName() {
+		return bankingSystemName;
 	}
 
 	public String getCentralBankName() {

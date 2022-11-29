@@ -6,12 +6,6 @@ import BankPackage.Bank;
 import MemberPackage.Member;
 
 public class MemberController {
-
-	public void addMember(Bank bank, Member member) {
-		List <Member> memberList = bank.getMemberList();
-		memberList.add(member);
-		bank.setMemberList(memberList);
-	}
 	
 	public void displayAllMembers(Bank bank) {
 		List <Member> memberList = bank.getMemberList();
@@ -26,6 +20,12 @@ public class MemberController {
 	public void displayMemberByMemberNumber(Bank bank, String memberNumber) {
 		List <Member> memberList = bank.getMemberList();
 		for(Member member : memberList) if(member.getMemberNumber().equals(memberNumber)) printMember(member) ;
+	}
+	
+	public void addMember(Bank bank, Member member) {
+		List <Member> memberList = bank.getMemberList();
+		memberList.add(member);
+		bank.setMemberList(memberList);
 	}
 	
 	public void deleteMemberByName(Bank bank, String name) {

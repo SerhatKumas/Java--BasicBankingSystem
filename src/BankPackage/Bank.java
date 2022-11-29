@@ -11,7 +11,7 @@ public class Bank {
 	private String bankPhoneNumber;
 	private String bankEmail;
 	private String centerCityOfManagement;
-	private BankingSystem bankingSystem;
+	private String bankingSystemName;
 	private List<Member> memberList;
 	
 	public Bank() {
@@ -19,7 +19,7 @@ public class Bank {
 		this.bankPhoneNumber = "";
 		this.bankEmail = "";
 		this.centerCityOfManagement = "";
-		this.bankingSystem = null;
+		this.bankingSystemName = null;
 		this.memberList = null;
 	}
 	
@@ -30,7 +30,7 @@ public class Bank {
 		this.bankPhoneNumber = bankPhoneNumber;
 		this.bankEmail = bankEmail;
 		this.centerCityOfManagement = centerCityOfManagement;
-		this.bankingSystem = bankingSystem;
+		this.bankingSystemName = bankingSystem.getBankingSystemName();
 		this.memberList = memberList;
 	}
 	
@@ -40,7 +40,7 @@ public class Bank {
 		this.bankPhoneNumber = bank.bankPhoneNumber;
 		this.bankEmail = bank.bankEmail;
 		this.centerCityOfManagement = bank.centerCityOfManagement;
-		this.bankingSystem = bank.bankingSystem;
+		this.bankingSystemName = bank.bankingSystemName;
 		this.memberList = bank.memberList;
 	}
 
@@ -75,8 +75,8 @@ public class Bank {
 	}
 
 
-	public BankingSystem getBankingSystem() {
-		return bankingSystem;
+	public String getBankingSystemName() {
+		return bankingSystemName;
 	}
 	
 }
