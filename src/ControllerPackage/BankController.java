@@ -4,6 +4,7 @@ import java.util.List;
 
 import BankPackage.Bank;
 import BankSystemPackage.BankingSystem;
+import MemberPackage.Member;
 
 public class BankController {
 	
@@ -47,6 +48,11 @@ public class BankController {
 		for(Bank bank : bankList) if(bank.getBankName().equals(name)) deletingBank = bank;
 		boolean isRemoved = bankList.remove(deletingBank);
 		if(isRemoved) bankingSystem.setBankList(bankList);
+	}
+	
+	public Bank createBank(String bankName, String bankPhoneNumber, String bankEmail, String centerCityOfManagement,
+			BankingSystem bankingSystem, List<Member> memberList) {
+		return new Bank(bankName, bankPhoneNumber, bankEmail, centerCityOfManagement, bankingSystem, memberList);
 	}
 	
 	private void printBank(Bank bank) {

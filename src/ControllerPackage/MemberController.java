@@ -2,6 +2,7 @@ package ControllerPackage;
 
 import java.util.List;
 
+import BankAccountPackage.BankAccount;
 import BankPackage.Bank;
 import MemberPackage.Member;
 
@@ -59,6 +60,10 @@ public class MemberController {
 		for(Member member : memberList) if(member.getMemberNumber().equals(memberNumber)) deletingMember = member;
 		boolean isRemoved = memberList.remove(deletingMember);
 		if(isRemoved) bank.setMemberList(memberList);
+	}
+	
+	public Member createMember(String idNumber, String name, String surname, String email, String phoneNumber, String jobTitle, String memberNumber, List<BankAccount> bankAccountList) {
+		return new Member(idNumber, name, surname, email, phoneNumber, jobTitle, memberNumber, bankAccountList);
 	}
 	
 	private void printMember(Member member) {

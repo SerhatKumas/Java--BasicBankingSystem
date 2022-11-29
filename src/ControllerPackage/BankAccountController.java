@@ -1,5 +1,6 @@
 package ControllerPackage;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import BankAccountPackage.*;
@@ -56,6 +57,12 @@ public class BankAccountController {
 		for(BankAccount bankAccount : bankAccountList) if(bankAccount.getAccountNumber().equals(accountNumber)) deletingBankAccount = bankAccount;
 		boolean isRemoved = bankAccountList.remove(deletingBankAccount);
 		if(isRemoved) member.setBankAccountList(bankAccountList);
+	}
+	
+	public BankAccount createBankAccount(String accountType, String accountNumber, String amountOfMoney, String formalPuposeOfAccount, String dailyWithdrawalLimit,
+			LocalDateTime accountOpeningDate, LocalDateTime accountClosingDate) {
+		return new BankAccount(accountType, accountNumber, amountOfMoney, formalPuposeOfAccount, dailyWithdrawalLimit,
+				accountOpeningDate, accountClosingDate);
 	}
 	
 	private void printBankAccount(BankAccount bankAccount) {
