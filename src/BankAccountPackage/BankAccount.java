@@ -74,5 +74,10 @@ public class BankAccount {
 	public void setAccountClosingDate(LocalDateTime accountClosingDate) {
 		this.accountClosingDate = accountClosingDate;
 	}
+
+	public void setAmountOfMoney(String amountOfMoney) {
+		this.amountOfMoney = amountOfMoney;
+	}
+	
 	
 }

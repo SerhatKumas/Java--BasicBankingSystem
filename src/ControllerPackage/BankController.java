@@ -51,8 +51,8 @@ public class BankController {
 	}
 	
 	public Bank createBank(String bankName, String bankPhoneNumber, String bankEmail, String centerCityOfManagement,
-			BankingSystem bankingSystem, List<Member> memberList) {
-		return new Bank(bankName, bankPhoneNumber, bankEmail, centerCityOfManagement, bankingSystem, memberList);
+			BankingSystem bankingSystem, List<Member> memberList, TransactionController transactionController) {
+		return new Bank(bankName, bankPhoneNumber, bankEmail, centerCityOfManagement, bankingSystem, memberList,transactionController);
 	}
 	
 	private void printBank(Bank bank) {
@@ -60,7 +60,7 @@ public class BankController {
 				+ "Bank Phone Number : " + bank.getBankPhoneNumber() + "\n"
 						+ "Bank Email : " + bank.getBankEmail() + "\n"
 								+ "City That Management Of Bank Placed In : " + bank.getCenterCityOfManagement() + "\n"
-										+ "Banking System Name That Bank In : " + bank.getBankingSystemName() + "\n"
+										+ "Banking System Name That Bank In : " + bank.getBankingSystem().getBankingSystemName() + "\n"
 												+ "Number Of Member : " + bank.getMemberList().size() + "\n");
 	}
 	

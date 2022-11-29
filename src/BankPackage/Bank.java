@@ -3,6 +3,7 @@ package BankPackage;
 import java.util.List;
 
 import BankSystemPackage.BankingSystem;
+import ControllerPackage.TransactionController;
 import MemberPackage.Member;
 
 public class Bank {
@@ -11,27 +12,30 @@ public class Bank {
 	private String bankPhoneNumber;
 	private String bankEmail;
 	private String centerCityOfManagement;
-	private String bankingSystemName;
+	private BankingSystem bankingSystem;
 	private List<Member> memberList;
+	private TransactionController transactionController;
 	
 	public Bank() {
 		this.bankName = "";
 		this.bankPhoneNumber = "";
 		this.bankEmail = "";
 		this.centerCityOfManagement = "";
-		this.bankingSystemName = null;
+		this.bankingSystem = null;
 		this.memberList = null;
+		this.transactionController = null;
 	}
 	
 	
 	public Bank(String bankName, String bankPhoneNumber, String bankEmail, String centerCityOfManagement,
-			BankingSystem bankingSystem, List<Member> memberList) {
+			BankingSystem bankingSystem, List<Member> memberList,TransactionController transactionController) {
 		this.bankName = bankName;
 		this.bankPhoneNumber = bankPhoneNumber;
 		this.bankEmail = bankEmail;
 		this.centerCityOfManagement = centerCityOfManagement;
-		this.bankingSystemName = bankingSystem.getBankingSystemName();
+		this.bankingSystem = bankingSystem;
 		this.memberList = memberList;
+		this.transactionController = transactionController;
 	}
 	
 	
@@ -40,8 +44,9 @@ public class Bank {
 		this.bankPhoneNumber = bank.bankPhoneNumber;
 		this.bankEmail = bank.bankEmail;
 		this.centerCityOfManagement = bank.centerCityOfManagement;
-		this.bankingSystemName = bank.bankingSystemName;
+		this.bankingSystem = bank.bankingSystem;
 		this.memberList = bank.memberList;
+		this.transactionController = bank.transactionController;
 	}
 
 
@@ -75,8 +80,8 @@ public class Bank {
 	}
 
 
-	public String getBankingSystemName() {
-		return bankingSystemName;
+	public BankingSystem getBankingSystem() {
+		return bankingSystem;
 	}
 	
 }
