@@ -8,6 +8,7 @@ import ControllerPackage.TransactionController;
 
 public class Member extends Person {
 	
+	//Properties of member
 	private String jobTitle;
 	private String memberNumber;
 	private List<BankAccount> bankAccountList;
@@ -44,6 +45,7 @@ public class Member extends Person {
 		this.bankAccountController = member.bankAccountController;
 	}
 
+	//Setter getter methods
 	public String getJobTitle() {
 		return jobTitle;
 	}

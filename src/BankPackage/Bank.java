@@ -9,7 +9,8 @@ import ControllerPackage.TransactionController;
 import MemberPackage.Member;
 
 public class Bank {
-
+	
+	//Properties of bank
 	private String bankName;
 	private String bankPhoneNumber;
 	private String bankEmail;
@@ -20,6 +21,7 @@ public class Bank {
 	private TransactionController transactionController;
 	private BankAccountController bankAccountController;
 	
+	//Empty constructor
 	public Bank() {
 		this.bankName = "";
 		this.bankPhoneNumber = "";
@@ -32,7 +34,7 @@ public class Bank {
 		this.bankAccountController = null;
 	}
 	
-	
+	//Full property constructor
 	public Bank(String bankName, String bankPhoneNumber, String bankEmail, String centerCityOfManagement,
 			BankingSystem bankingSystem, List<Member> memberList,TransactionController transactionController, MemberController memberController,BankAccountController bankAccountController) {
 		this.bankName = bankName;
@@ -46,7 +48,7 @@ public class Bank {
 		this.bankAccountController = bankAccountController;
 	}
 	
-	
+	//Copy constructor
 	public Bank(Bank bank) {
 		this.bankName = bank.bankName;
 		this.bankPhoneNumber = bank.bankPhoneNumber;
@@ -59,7 +61,7 @@ public class Bank {
 		this.bankAccountController = bank.bankAccountController;
 	}
 
-
+	//Getter setter methods
 	public List<Member> getMemberList() {
 		return memberList;
 	}

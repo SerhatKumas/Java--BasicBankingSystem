@@ -36,6 +36,7 @@ public class Person {
 			this.phoneNumber = person.phoneNumber;
 		}
 	
+	//Getter setter methods
 	public String getName() {
 		return name;
 	}

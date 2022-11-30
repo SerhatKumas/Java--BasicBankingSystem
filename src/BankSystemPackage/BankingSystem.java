@@ -7,6 +7,7 @@ import ControllerPackage.BankController;
 
 public class BankingSystem {
 	
+	//Properties of Banking System
 	private String bankingSystemName;
 	private String centralBankName;
 	private String countryName;
@@ -14,6 +15,7 @@ public class BankingSystem {
 	private List<Bank> bankList;
 	private BankController bankController;
 	
+	//Empty constructor
 	public BankingSystem() {
 		bankingSystemName = "" ;
 		this.centralBankName = "";
@@ -23,6 +25,7 @@ public class BankingSystem {
 		this.bankController = null;
 	}
 	
+	//Full property constructor
 	public BankingSystem(String bankingSystemName, String centralBankName, String countryName, String countryCode, List<Bank> bankList, BankController bankController) {
 		this.bankingSystemName = bankingSystemName;
 		this.centralBankName = centralBankName;
@@ -32,7 +35,7 @@ public class BankingSystem {
 		this.bankController = bankController;
 	}
 	
-	
+	//Copy constructor
 	public BankingSystem(BankingSystem bankingSystem) {
 		this.bankingSystemName = bankingSystem.bankingSystemName;
 		this.centralBankName = bankingSystem.centralBankName;
@@ -42,6 +45,7 @@ public class BankingSystem {
 		this.bankController = bankingSystem.bankController;
 	}
 
+	//Getter setter methods
 	public List<Bank> getBankList() {
 		return bankList;
 	}

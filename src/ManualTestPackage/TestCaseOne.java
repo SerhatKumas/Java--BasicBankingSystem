@@ -123,6 +123,23 @@ public class TestCaseOne {
 		
 		member8.getBankAccountController().displayAllTheBankAccounts(member8);
 		
+		//Deposit money method
+		member1.getBankAccountController().displayBankAccount(savingAccount1);
+		member1.getTransactionController().depositMoney(savingAccount1, "5000");
+		member1.getBankAccountController().displayBankAccount(savingAccount1);
+		
+		//Withdraw money method
+		member1.getBankAccountController().displayBankAccount(savingAccount1);
+		member1.getTransactionController().withdrawMoney(savingAccount1, "55000");
+		member1.getBankAccountController().displayBankAccount(savingAccount1);
+		
+		////Transfer money method
+		member1.getBankAccountController().displayBankAccount(savingAccount1);
+		member1.getBankAccountController().displayBankAccount(chequeAccount1);
+		member1.getTransactionController().transferMoney(chequeAccount1, savingAccount1, "1000");
+		member1.getBankAccountController().displayBankAccount(chequeAccount1);
+		member1.getBankAccountController().displayBankAccount(savingAccount1);
+		
 		
 	}
 	

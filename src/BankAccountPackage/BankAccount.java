@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 public class BankAccount {
 	
+	//Bank of Account properties
 	private String accountType;
 	private String accountNumber;
 	private String amountOfMoney;
@@ -12,6 +13,7 @@ public class BankAccount {
 	private LocalDate accountOpeningDate;
 	private LocalDate accountClosingDate;
 	
+	//Empty constructor
 	public BankAccount() {
 		this.accountType = "";
 		this.accountNumber = "";
@@ -22,6 +24,7 @@ public class BankAccount {
 		this.accountClosingDate = null;
 	}
 	
+	//Full property constructor
 	public BankAccount(String accountType, String accountNumber, String amountOfMoney, String formalPuposeOfAccount, String dailyWithdrawalLimit,
 			LocalDate accountOpeningDate, LocalDate accountClosingDate) {
 		this.accountType = accountType;
@@ -33,6 +36,7 @@ public class BankAccount {
 		this.accountClosingDate = accountClosingDate;
 	}
 
+	//Copy constructor
 	public BankAccount(BankAccount bankAccount) {
 		this.accountType = bankAccount.accountType;
 		this.accountNumber = bankAccount.accountNumber;
@@ -43,6 +47,7 @@ public class BankAccount {
 		this.accountClosingDate = bankAccount.accountClosingDate;
 	}
 	
+	//Setter getter methods
 	public String getAccountType() {
 		return accountType;
 	}
