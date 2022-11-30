@@ -14,6 +14,8 @@ public class TestCaseOne {
 
 	public static void main(String[] args) {
 		
+		//--------------------------------------------------------- All Dummy Data Assignment ---------------------------------------------------------
+		
 		BankingSystem bankSystemTr = new BankingSystem("Turkish Market","Turkish Central Bank","Turkey","TR",new LinkedList<Bank>(), new BankController());
 		BankingSystem bankSystemUS = new BankingSystem("American Market","American Central Bank","America","USA",new LinkedList<Bank>(), new BankController());
 		
@@ -107,8 +109,19 @@ public class TestCaseOne {
 		bankAmericanExpress.getMemberList().add(member7);
 		bankAmericanExpress.getMemberList().add(member8);
 		
-		//--------------------------------------------------------- All Dummy Data Assignment ---------------------------------------------------------
+		bankSystemTr.getBankList().add(bankZiraat);
+		bankSystemTr.getBankList().add(bankIs);
 		
+		bankSystemUS.getBankList().add(bankAmericanExpress);
+		bankSystemUS.getBankList().add(bankOfAmerica);
+		
+		//--------------------------------------------------------- Test Actions ---------------------------------------------------------
+		
+		bankSystemTr.getBankController().displayAllBanks(bankSystemTr);
+		
+		bankZiraat.getMemberController().displayAllMembers(bankZiraat);
+		
+		member8.getBankAccountController().displayAllTheBankAccounts(member8);
 		
 		
 	}

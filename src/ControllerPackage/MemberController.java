@@ -74,7 +74,7 @@ public class MemberController {
 										+ "Member Phone Number : " + member.getPhoneNumber() + "\n"
 												+ "Member Job Title : " + member.getJobTitle() + "\n"
 														+ "Customer Number : " + member.getMemberNumber() + "\n"
-																+ "Number Of Member Bank Account : " + member.getBankAccountList().size());
+																+ "Number Of Member Bank Account : " + member.getBankAccountList().size() + "\n");
 	}
 	
 }

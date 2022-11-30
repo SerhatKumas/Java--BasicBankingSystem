@@ -72,7 +72,7 @@ public class BankAccountController {
 								+ "Bank Account Purpose : " + bankAccount.getFormalPuposeOfAccount() + "\n"
 										+ "Bank Account Daily Witdrawal Limit : " + bankAccount.getDailyWithdrawalLimit() + "\n"
 												+ "Bank Account Opening Date : " + bankAccount.getAccountOpeningDate() + "\n"
-														+ "Bank Account Closing Date : " + bankAccount.getAccountClosingDate());
+														+ "Bank Account Closing Date : " + bankAccount.getAccountClosingDate() +"\n");
 	}
 	
 }
