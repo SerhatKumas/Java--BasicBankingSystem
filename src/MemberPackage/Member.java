@@ -55,7 +55,7 @@ public class Member extends Person {
 	public List<BankAccount> getBankAccountList() {
 		return bankAccountList;
 	}
-
+	
 	public void setBankAccountList(List<BankAccount> bankAccountList) {
 		this.bankAccountList = bankAccountList;
 	}

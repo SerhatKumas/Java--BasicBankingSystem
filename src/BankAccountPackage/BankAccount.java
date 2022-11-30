@@ -1,6 +1,6 @@
 package BankAccountPackage;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class BankAccount {
 	
@@ -9,8 +9,8 @@ public class BankAccount {
 	private String amountOfMoney;
 	private String formalPuposeOfAccount;
 	private String dailyWithdrawalLimit;
-	private LocalDateTime accountOpeningDate;
-	private LocalDateTime accountClosingDate;
+	private LocalDate accountOpeningDate;
+	private LocalDate accountClosingDate;
 	
 	public BankAccount() {
 		this.accountType = "";
@@ -23,7 +23,7 @@ public class BankAccount {
 	}
 	
 	public BankAccount(String accountType, String accountNumber, String amountOfMoney, String formalPuposeOfAccount, String dailyWithdrawalLimit,
-			LocalDateTime accountOpeningDate, LocalDateTime accountClosingDate) {
+			LocalDate accountOpeningDate, LocalDate accountClosingDate) {
 		this.accountType = accountType;
 		this.accountNumber = accountNumber;
 		this.amountOfMoney = amountOfMoney;
@@ -63,15 +63,15 @@ public class BankAccount {
 		return dailyWithdrawalLimit;
 	}
 
-	public LocalDateTime getAccountOpeningDate() {
+	public LocalDate getAccountOpeningDate() {
 		return accountOpeningDate;
 	}
 
-	public LocalDateTime getAccountClosingDate() {
+	public LocalDate getAccountClosingDate() {
 		return accountClosingDate;
 	}
 
-	public void setAccountClosingDate(LocalDateTime accountClosingDate) {
+	public void setAccountClosingDate(LocalDate accountClosingDate) {
 		this.accountClosingDate = accountClosingDate;
 	}
 

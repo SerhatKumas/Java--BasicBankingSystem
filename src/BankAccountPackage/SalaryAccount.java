@@ -1,6 +1,6 @@
 package BankAccountPackage;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class SalaryAccount extends BankAccount {
 	
@@ -12,8 +12,8 @@ public class SalaryAccount extends BankAccount {
 		super(salaryAccount);
 	}
 
-	public SalaryAccount(String accountNumber, String amountOfMoney, String dailyWithdrawalLimit, LocalDateTime accountOpeningDate, LocalDateTime accountClosingDate) {
-		super("Salary Account", accountNumber, amountOfMoney, "Salary deposit by companies", dailyWithdrawalLimit, accountOpeningDate,accountClosingDate);
+	public SalaryAccount(String accountNumber, String amountOfMoney, LocalDate accountOpeningDate, LocalDate accountClosingDate) {
+		super("Salary Account", accountNumber, amountOfMoney, "Salary deposit by companies", "20000", accountOpeningDate,accountClosingDate);
 
 	}
 }

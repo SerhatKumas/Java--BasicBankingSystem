@@ -1,6 +1,6 @@
 package ControllerPackage;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 import BankAccountPackage.*;
@@ -60,7 +60,7 @@ public class BankAccountController {
 	}
 	
 	public BankAccount createBankAccount(String accountType, String accountNumber, String amountOfMoney, String formalPuposeOfAccount, String dailyWithdrawalLimit,
-			LocalDateTime accountOpeningDate, LocalDateTime accountClosingDate) {
+			LocalDate accountOpeningDate, LocalDate accountClosingDate) {
 		return new BankAccount(accountType, accountNumber, amountOfMoney, formalPuposeOfAccount, dailyWithdrawalLimit,
 				accountOpeningDate, accountClosingDate);
 	}
